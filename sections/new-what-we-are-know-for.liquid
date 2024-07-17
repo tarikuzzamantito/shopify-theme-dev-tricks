@@ -34,12 +34,14 @@
 
           </div>
         </div>
-          
+        
         {% when "description-block" %}
 
           <div class="column-1-2">
             <div class="description-block">
-              <img class="Image--lazyLoad Image--zoomOut" src="{{ block.settings.image | img_url: '300x400' }}" data-optimumx="1.4" data-expand="-150" alt="{{ block.settings.image.alt }}">
+              <div style="text-align: {{ block.settings.image-align }};">
+                <img class="Image--lazyLoad Image--zoomOut" src="{{ block.settings.image | img_url: '300x400' }}" data-optimumx="1.4" data-expand="-150" alt="{{ block.settings.image.alt }}">
+              </div>
               {{ block.settings.description }}
             </div>
           </div>
@@ -123,6 +125,26 @@
           "type": "image_picker",
           "id": "image",
           "label": "Image"
+        },
+        {
+          "type": "select",
+          "id": "image-align",
+          "label": "Image Alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            }
+          ],
+          "default":"right"
         },
         {
           "type": "richtext",
