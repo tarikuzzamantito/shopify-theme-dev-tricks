@@ -1,3 +1,87 @@
+<section class="what-we-are-know-for" id="{{ section.id }}">
+  <div class="Container container">
+    <div class="row">
+
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when "title-block" %}          
+
+        <div class="column-1-2">
+          <div class="title-block">
+            {% if block.settings.sub-title != blank %}
+              <div class="sub-title">
+                <span>{{ block.settings.sub-title }}</span>
+              </div>
+            {% endif %}
+            
+            {% if block.settings.title != blank %}
+              <div class="headtitle SectionHeader">
+                <h1 class="SectionHeader__Heading Heading u-h1">{{ block.settings.title }}</h1>
+              </div>
+            {% endif %}
+
+            {% if block.settings.italic-title != blank %}
+              <div class="headtitle SectionHeader">
+                <h2 class="SectionHeader__Heading Heading u-h1"><em>{{ block.settings.italic-title }}</em></h2>
+              </div>
+            {% endif %}
+
+
+            
+            
+
+            <img class="Image--lazyLoad Image--zoomOut" src="{{ block.settings.image | img_url: '1000x400' }}" data-optimumx="1.4" data-expand="-150" alt="{{ block.settings.image.alt }}">
+
+          </div>
+        </div>
+          
+        {% when "description-block" %}
+
+          <div class="column-1-2">
+            <div class="description-block">
+              <img class="Image--lazyLoad Image--zoomOut" src="{{ block.settings.image | img_url: '500x1000' }}" data-optimumx="1.4" data-expand="-150" alt="{{ block.settings.image.alt }}">
+              {{ block.settings.description }}
+            </div>
+          </div>
+          
+        {% else %}
+          
+      {% endcase %}
+    {% endfor %}
+
+    </div>
+  </div>
+</section>
+
+
+<style>
+  .what-we-are-know-for {}
+  .column-1-2 {
+    flex-basis: 50%;
+    padding  20px;
+  }
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .container {
+    max-width: 1000px;
+  }
+  @media screen and (min-width: 1140px) {
+    .Container {
+      padding: 0  80px;
+    }
+  }  
+  @media screen and (min-width: 641px) {
+    .Container {
+      padding: 0  50px;
+    }
+  }
+  
+</style>
+
+
 {%  schema  %} 
 {
   "name": "What We're know for",
