@@ -350,6 +350,25 @@
         recipientFormCollapsed: `{{ 'recipient.form.collapsed' | t }}`,
         countrySelectorSearchCount: `{{ 'localization.country_results_count' | t: count: '[count]' }}`,
       };
+
+      // =========== START ========== -> Show dropdown menu on hover in Shopify Dawn Theme
+      const inlineMenu = document.querySelector(".header__inline-menu");
+      const detailsItems = inlineMenu.querySelectorAll("details");
+
+      detailsItems.forEach(item => {
+        const ulElement = item.querySelector("ul"); 
+
+        item.addEventListener("mouseover", () => {
+          item.setAttribute("open", true);
+          ulElement.addEventListener("mouseleave", () => {
+            item.removeAttribute("open");
+          });
+          item.addEventListener("mouseleave", () => {
+            item.removeAttribute("open");
+          });
+        });
+      });
+      // =========== END ==========
     </script>
 
     {%- if settings.predictive_search_enabled -%}
