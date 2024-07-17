@@ -30,7 +30,7 @@
             
             
 
-            <img class="Image--lazyLoad Image--zoomOut" src="{{ block.settings.image | img_url: '500x300' }}" data-optimumx="1.4" data-expand="-150" alt="{{ block.settings.image.alt }}">
+            <img class="Image--lazyLoad Image--zoomOut" width="500" height="300" src="{{ block.settings.image | img_url: '500x300' }}" data-optimumx="1.4" data-expand="-150" alt="{{ block.settings.image.alt }}">
 
           </div>
         </div>
@@ -40,7 +40,7 @@
           <div class="column-1-2">
             <div class="description-block">
               <div style="text-align: {{ block.settings.image-align }};">
-                <img class="Image--lazyLoad Image--zoomOut" src="{{ block.settings.image | img_url: '300x400' }}" data-optimumx="1.4" data-expand="-150" alt="{{ block.settings.image.alt }}">
+                <img class="Image--lazyLoad Image--zoomOut" width="300" height="400" src="{{ block.settings.image | img_url: '300x400' }}" data-optimumx="1.4" data-expand="-150" alt="{{ block.settings.image.alt }}">
               </div>
               {{ block.settings.description }}
             </div>
