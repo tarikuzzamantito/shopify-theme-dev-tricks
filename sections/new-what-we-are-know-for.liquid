@@ -1,7 +1,61 @@
 {%  schema  %} 
 {
   "name": "What We're know for",
-  "settings": [],
+  "settings": [
+    {
+      "type": "color",
+      "id": "bg",
+      "label": "Background Color",
+      "default": "#FBF5F1"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "title-block",
+      "name": "Title Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Looking for Photos that make you stop"
+        },
+        {
+          "type": "textarea",
+          "id": "sub-title",
+          "label": "Sub Title",
+          "default": "What We're know for:"
+        },
+        {
+          "type": "textarea",
+          "id": "italic-title",
+          "label": "Italic Title",
+          "default": "and feel something ?"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }, {
+      "type": "description-block",
+      "name": "Description Block",
+      "settings": [        
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Description",
+          "default": "<p>Dreamcatcher try-hand listicle vefan tonx echo park kale chips tofu banjo cpper mug. Hell of plaid sustainable 8-bit y? DSA Vinyl shaman food truck every carry readymade yes plz health goth . Schliz lumbir funny pack echo park vexilloiogist portland letterpress normcore.</p>"
+        }
+      ]
+    }
+  ],
   "presets": [
     {
       "name": "What We're know for"
