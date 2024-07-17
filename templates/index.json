@@ -11,7 +11,28 @@
   "sections": {
     "new_what_we_are_know_for_Bwm3RB": {
       "type": "new-what-we-are-know-for",
+      "blocks": {
+        "title_block_RHjnRb": {
+          "type": "title-block",
+          "settings": {
+            "title": "Looking for Photos that make you stop",
+            "sub-title": "What We're know for:",
+            "italic-title": "and feel something ?"
+          }
+        },
+        "description_block_Lbfpcw": {
+          "type": "description-block",
+          "settings": {
+            "description": "<p>Dreamcatcher try-hand listicle vefan tonx echo park kale chips tofu banjo cpper mug. Hell of plaid sustainable 8-bit y? DSA Vinyl shaman food truck every carry readymade yes plz health goth . Schliz lumbir funny pack echo park vexilloiogist portland letterpress normcore.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "title_block_RHjnRb",
+        "description_block_Lbfpcw"
+      ],
       "settings": {
+        "bg": "#FBF5F1"
       }
     },
     "image_banner": {
