@@ -2,7 +2,7 @@
 
   assign section_bg = section.settings.section-bg
   assign section_y = section.settings.paddingY
-  assign container_mc = section.settings.container-mc
+  assign containermc = section.settings.container-mc
   assign clayout = section.settings.container-layout
 
 %}
@@ -12,17 +12,17 @@
     padding: {{ section_y }}px 0;
   }
 
-  .{{ section.id }} .container_mc {
+  .{{ section.id }} .container {
     {% if clayout == "container-mc" %}
-    max-width: {{ container_mc }}px;
+    max-width: {{ containermc }}px;
     {%  elsif %}
-    margin: 0 auto; 
+    margin: 0 auto;
   }
 </style>
 
 <section class="{{ section.id }}">
   <!-- Multi Column Custom Section Design in Shopify Liquid Part 01: https://www.youtube.com/watch?v=xkQxV-fgRhk&t=147s -->
-   <div class="container_mc">
+   <div class="container">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora minus ducimus deleniti ad debitis eos at amet nam distinctio. Aspernatur ea corrupti laudantium iure! Aperiam eius facilis repellat unde magnam.
    </div>
 </section>
