@@ -13,9 +13,9 @@
   }
 
   .{{ section.id }} .container {
-    {% if clayout == "container-mc" %}
+    {% if clayout == "container" %}
     max-width: {{ containermc }}px;
-    {%  elsif %}
+    {% elsif %}
     margin: 0 auto;
   }
 </style>
@@ -58,14 +58,14 @@
             },
             {
               "label": "Container",
-              "value": "container-mc"
+              "value": "container"
             }
           ],
-          "default": "container-mc"
+          "default": "container"
         },
         {
           "type": "range",
-          "id": "container-mc",
+          "id": "container",
           "label": "Container Width",
           "min": 400,
           "max": 1600,
