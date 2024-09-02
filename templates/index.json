@@ -151,6 +151,10 @@
     "multi_column_section_zHRTqt": {
       "type": "multi-column-section",
       "settings": {
+        "section-bg": "#ECF0FC",
+        "paddingY": 50,
+        "container-layout": "container",
+        "container": 900
       }
     }
   },
