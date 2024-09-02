@@ -153,8 +153,8 @@
       "settings": {
         "section-bg": "#ecf0fc",
         "paddingY": 100,
-        "container-layout": "container",
-        "container": 500
+        "container-layout": "container_mc",
+        "container_mc": 1000
       }
     }
   },
