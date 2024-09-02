@@ -1,18 +1,32 @@
+{% liquid
+
+  assign section_bg = section.settings.section-bg
+  assign section_y = section.settings.paddingY
+  assign container = section.settings.container
+
+%}
 <style>
   .{{ section.id }} {
-    background-color: {{ section.settings.section-bg }};
-    padding: {{ section.settings.paddingY }}px 0;
+    background-color: {{ section_bg }};
+    padding: {{ section_y }}px 0;
+  }
+
+  .{{ section.id }}.container {
+    max-width: {{ container }}px;
+    margin: 0 auto;
   }
 </style>
 
 <section class="{{ section.id }}">
   <!-- Multi Column Custom Section Design in Shopify Liquid Part 01: https://www.youtube.com/watch?v=xkQxV-fgRhk&t=147s -->
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora minus ducimus deleniti ad debitis eos at amet nam distinctio. Aspernatur ea corrupti laudantium iure! Aperiam eius facilis repellat unde magnam.
+   <div class="container">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora minus ducimus deleniti ad debitis eos at amet nam distinctio. Aspernatur ea corrupti laudantium iure! Aperiam eius facilis repellat unde magnam.
+   </div>
 </section>
 
 {% schema %}
   {
-    "name": "Multi-Column Section",
+    "name": "Multi Column Section",
     "settings": [
         {
           "type": "color",
@@ -28,6 +42,32 @@
           "max": 120,
           "step": 5,
           "default": 50,
+          "unit": "px"
+        },
+        {
+          "type": "select",
+          "id": "container-layout",
+          "label": "Container Layout",
+          "options": [
+            {
+              "label": "Full Width",
+              "value": "100%"
+            },
+            {
+              "label": "Container",
+              "value": "container"
+            }
+          ],
+          "default": "container"
+        },
+        {
+          "type": "range",
+          "id": "container",
+          "label": "Container Width",
+          "min": 400,
+          "max": 1600,
+          "step": 100,
+          "default": 500,
           "unit": "px"
         }
       ],
