@@ -2,7 +2,8 @@
 
   assign section_bg = section.settings.section-bg
   assign section_y = section.settings.paddingY
-  assign container_mc = section.settings.container_mc
+  assign container_mc = section.settings.container-mc
+  assign clayout = section.settings.container-layout
 
 %}
 <style>
@@ -11,17 +12,11 @@
     padding: {{ section_y }}px 0;
   }
 
-<<<<<<< HEAD
-  .{{ section.id }} .container {
-    {% if clayout == "container" %}
-    max-width: {{ containermc }}px;
-    {% elsif %}
-    margin: 0 auto;
-=======
   .{{ section.id }} .container_mc {
+    {% if clayout == "container-mc" %}
     max-width: {{ container_mc }}px;
+    {%  elsif %}
     margin: 0 auto; 
->>>>>>> f2e9cc7e03e91fd1803ba65a3477c9e7b966e9e3
   }
 </style>
 
@@ -63,25 +58,14 @@
             },
             {
               "label": "Container",
-<<<<<<< HEAD
-              "value": "container"
+              "value": "container-mc"
             }
           ],
-          "default": "container"
+          "default": "container-mc"
         },
         {
           "type": "range",
-          "id": "container",
-=======
-              "value": "container_mc"
-            }
-          ],
-          "default": "container_mc"
-        },
-        {
-          "type": "range",
-          "id": "container_mc",
->>>>>>> f2e9cc7e03e91fd1803ba65a3477c9e7b966e9e3
+          "id": "container-mc",
           "label": "Container Width",
           "min": 400,
           "max": 1600,
