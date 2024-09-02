@@ -9,6 +9,15 @@
 */
 {
   "sections": {
+    "multi_column_section_zHRTqt": {
+      "type": "multi-column-section",
+      "settings": {
+        "section-bg": "#ecf0fc",
+        "paddingY": 100,
+        "container-layout": "container_mc",
+        "container_mc": 1000
+      }
+    },
     "new_what_we_are_know_for_Bwm3RB": {
       "type": "new-what-we-are-know-for",
       "blocks": {
@@ -147,22 +156,13 @@
       "settings": {
         "section_header": "Featured Collection"
       }
-    },
-    "multi_column_section_zHRTqt": {
-      "type": "multi-column-section",
-      "settings": {
-        "section-bg": "#ecf0fc",
-        "paddingY": 100,
-        "container-layout": "container_mc",
-        "container_mc": 1000
-      }
     }
   },
   "order": [
+    "multi_column_section_zHRTqt",
     "new_what_we_are_know_for_Bwm3RB",
     "image_banner",
     "featured_collection",
-    "custom_section_3column_cH6PKL",
-    "multi_column_section_zHRTqt"
+    "custom_section_3column_cH6PKL"
   ]
 }
