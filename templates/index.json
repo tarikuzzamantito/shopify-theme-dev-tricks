@@ -25,6 +25,7 @@
           "type": "description-block",
           "settings": {
             "image": "shopify:\/\/shop_images\/close-up-of-a-person-arm-wearing-a-smartwatch.jpg",
+            "image-align": "right",
             "description": "<p>Dreamcatcher try-hand listicle vefan tonx echo park kale chips tofu banjo cpper mug. Hell of plaid sustainable 8-bit y? DSA Vinyl shaman food truck every carry readymade yes plz health goth . Schliz lumbir funny pack echo park vexilloiogist portland letterpress normcore.<\/p>"
           }
         }
@@ -146,12 +147,18 @@
       "settings": {
         "section_header": "Featured Collection"
       }
+    },
+    "multi_column_section_zHRTqt": {
+      "type": "multi-column-section",
+      "settings": {
+      }
     }
   },
   "order": [
     "new_what_we_are_know_for_Bwm3RB",
     "image_banner",
     "featured_collection",
-    "custom_section_3column_cH6PKL"
+    "custom_section_3column_cH6PKL",
+    "multi_column_section_zHRTqt"
   ]
 }
